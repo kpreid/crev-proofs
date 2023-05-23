@@ -1,0 +1,29 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-05-23T16:20:51.307041-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: async_fn_traits
+  version: 0.1.1
+  revision: 3ef806eeb1d503da490aab688cb157f4eb8531c6
+  digest: LrmLMQ295m_0tRAywO1goAwQv9lAScZNShWm_M6HY7o
+review:
+  thoroughness: medium
+  understanding: high
+  rating: strong
+comment: |-
+  Extremely simple crate providing useful trait aliases. The code consists
+  solely of macro-generated `trait`s and `impl`s; other than the `macro_rules`
+  macro itself, all of the crate’s definition is visible in its documentation.
+  If there were a bug, the worst consequence would likely be dependents failing
+  to compile, since none of the code is statements or expressions to execute
+  at run time.
+----- SIGN CREV PROOF -----
+nCjiwzrxtdvdTpSq9DWO8MKLX02jGzB8JrIfbsjpv3IMkNcFGPZs1WVkvzK8CcCmL84tW79xXys-MDi8Y6-aBw
+----- END CREV PROOF -----
+
