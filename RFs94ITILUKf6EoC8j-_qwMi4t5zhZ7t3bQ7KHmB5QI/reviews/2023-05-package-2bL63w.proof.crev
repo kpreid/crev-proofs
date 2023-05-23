@@ -27,3 +27,32 @@ comment: |-
 nCjiwzrxtdvdTpSq9DWO8MKLX02jGzB8JrIfbsjpv3IMkNcFGPZs1WVkvzK8CcCmL84tW79xXys-MDi8Y6-aBw
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-05-23T16:32:37.874837-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: mutants
+  version: 0.0.3
+  revision: 9685de346012afb9c379432eaf9c6960e22185df
+  digest: Mjd8Si1M4isfRRLBG11iLa4REc5BcpDSTFKyT5B2VzY
+review:
+  thoroughness: medium
+  understanding: high
+  rating: positive
+comment: |-
+  This proc-macro crate defines an attribute macro `#[mutants::skip]` which
+  always returns its input unchanged (i.e. the attribute has no effect).
+  
+  The attribute is detected by the `cargo-mutants` tool when it parses source
+  code. It should be completely safe and have no effect unless you are using
+  `cargo-mutants` (which this is not a review of).
+----- SIGN CREV PROOF -----
+e9F2PEGfi-DPi8JWaqmezE3Povc3t7eON_iDgk5jnWGveLWQvLcXvllCYXs2ITOK59Pe6BNnKjgMhfezj524Cg
+----- END CREV PROOF -----
+
