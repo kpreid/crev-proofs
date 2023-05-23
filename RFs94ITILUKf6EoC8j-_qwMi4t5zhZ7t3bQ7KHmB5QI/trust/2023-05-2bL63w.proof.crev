@@ -60,3 +60,20 @@ trust: low
 caSGOeMo165ChWOYPzh-yNy0G8c8OSLkjUgnLuDHMvygE3jVe6hdLr9JGW-1sOhH9epkBdd1Ogi25LP75qWDAQ
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: trust
+version: -1
+date: 2023-05-23T16:52:57.016365-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+ids:
+- id-type: crev
+  id: -sApEowWcAS9J0R7aO18cghvhLBpuMhyeUuWQq_fits
+  url: https://github.com/HeroicKatora/crev-proofs
+trust: low
+----- SIGN CREV PROOF -----
+lcx0dCELDFFbZ4CYN7BQJdlXpLLlEEM5ygaGxG7qSbGXby2DbsKhRVlYUV1gwSwd8AcY_I4kwMBZ6wUwfXNSDw
+----- END CREV PROOF -----
+
