@@ -56,3 +56,34 @@ comment: |-
 e9F2PEGfi-DPi8JWaqmezE3Povc3t7eON_iDgk5jnWGveLWQvLcXvllCYXs2ITOK59Pe6BNnKjgMhfezj524Cg
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-05-29T16:43:57.263407-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: base64
+  version: 0.21.2
+  revision: 1e8246a889f2b43299279e0c7ebd849dcaa7cb32
+  digest: MG5L4iR69-yrKOHmg05iQOoZyeqqcjTHAdt0n34byTU
+review:
+  thoroughness: low
+  understanding: medium
+  rating: positive
+comment: |-
+  Contains no unsafe code. Contains no IO. Straightforward and well organized
+  code, though the number of different cases and scenarios it handles makes
+  it daunting to thoroughly comprehend. Well commented. Extensive tests.
+  
+  I have not reviewed the correctness of the algorithms or their resistance
+  to DoS attacks (i.e. whether they can enter infinite loops or over-allocate).
+  I have examined each line to check that it is not obviously malicious or
+  obfuscated.
+----- SIGN CREV PROOF -----
+ny8wlwo2bfSeRx70jEN0uOhEU_MWuyGW6ErMLMaHtcdMkTSVhHfxi_F-aSadmO4zmvTkk90kJC6OT2sRQpsTBw
+----- END CREV PROOF -----
+
