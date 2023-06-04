@@ -1,0 +1,34 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-06-03T19:24:04.798113-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: fastnbt
+  version: 2.4.4
+  revision: 64670b76f72b40679c02cd0f5946f6a70ded4f90
+  digest: 34IkUXH-8eNOgz5yW8MMPuu-b4mCCqJN8S6p1ySX0HE
+review:
+  thoroughness: low
+  understanding: low
+  rating: neutral
+comment: |-
+  Contains some straightforward unsafe code:
+  
+  * `[i8]`↔`[u8]` and `Vec<u8>`↔`Vec<i8>` reinterpretations.
+  * Converting UTF-8 `String`s to bytes and then relying on the bytes being UTF-8.
+  
+  Contains no IO operations (`std::fs` etc.) except in the examples.
+  
+  I have not reviewed the correctness of the algorithms.
+  I have examined the code to check that it is not obviously malicious or
+  obfuscated, and that it looks like the kind of code that does what it is
+  supposed to (that is: implement a de/serializer).
+----- SIGN CREV PROOF -----
+yiO70SOk-azHHs1aha5P19Gv4b9-jhIt1hdsqehNdBbIRBNfYdG9dj1UwmJQhPB3pl_cS1JhxCAZkuRgOeeOCQ
+----- END CREV PROOF -----
+
