@@ -1,0 +1,34 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-07-14T11:48:28.075411-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: pretty_assertions
+  version: 1.4.0
+  revision: 3f1ebc0cac5f88e875f036bf16636e15fa935c8d
+  digest: rMT36NcryRpIMWEbth1jjEIf_5hCKejhaNU27uJ-8JE
+review:
+  thoroughness: medium
+  understanding: medium
+  rating: positive
+comment: |-
+  Simple, clear code. No unsafe.
+  
+  I have some nitpicks about correctness-in-all-cases but none of
+  them would do significant harm if not addressed. Specifically:
+    
+  * The macros have internal-use arms, which could instead be implemented as
+    separate macros.
+  * The package defines mutually exclusive Cargo features, which is incorrect
+    (<https://doc.rust-lang.org/cargo/reference/features.html#feature-unification>);
+    if a `std`-using package depends on a `no_std` package and both of
+    them depend on `pretty_assertions` then both features will end up enabled.
+----- SIGN CREV PROOF -----
+bREvfNv3AngbxCz-3DuAINJ3qRonxrV11I6BHAOrY_7vYRoTCTVDNHKQhSK_Fp3Hy2t6WOml3O-6ZiYNUiuHCA
+----- END CREV PROOF -----
+
