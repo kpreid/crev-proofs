@@ -1,0 +1,57 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-08-14T11:11:04.925485-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: rectangle-pack
+  version: 0.4.2
+  revision: e541bbace6cce13cb5b82705c026f3d4c9582d88
+  digest: LlHZ6QOe2PQiyl8V2kIr_qd4aupV6gUf7QQ1ZQAoDo4
+review:
+  thoroughness: low
+  understanding: low
+  rating: positive
+comment: |-
+  Meta: I have reviewed this package as part of a search for rectangle-packing
+  algorithm implementations. I have not yet reviewed other packages, nor yet
+  fully exercised this one. That said, my observations so far:
+  
+  The code is straightforwardly written, and does not pose significant risks
+  (other than correctness of the algorithm, which I have not evaluated).
+  However, there are some caveats you may wish to consider.
+  
+  * While `no_std` is supported, the code does require `alloc` and will allocate
+    inside of its algorithms.
+  
+  * Documentation is unclear. Broadly, it describes the purpose of items but 
+    fails to describe how to actually use or implement them, except in examples:
+      * `GroupedRectsToPlace` does not explain what to do with the type
+        parameters `RectToPlaceId` and `GroupId`.
+      * In `ComparePotentialContainersFn` and `contains_smallest_box()`, what
+        is a `[WidthHeightDepth; 3]`? Why are exactly three boxes being passed?
+        The answer may be found in `BinSection::try_place()`'s documentation,
+        but only by implication.
+      * In `BoxSizeHeuristicFn`, why would one use anything other than
+       `volume_heuristic()`, multiplying to obtain the volume?
+  
+  * The type `WidthHeightDepth` is not public; this does not prevent the library
+    from being used since its values are only ever provided, not consumed,
+    but it is inelegant and potentially inconvenient since the requirement to
+    provide a function accepting `WidthHeightDepth` can only be satisfied by a
+    closure.
+  
+  Comments on internal code quality, not relevant to usage:
+  
+  * `KeyValMap` could be conditionally defined in one place as a type alias
+    instead of twice in two modules.
+  
+  * There are several pieces of unfinished, unused (but private) code.
+----- SIGN CREV PROOF -----
+rpL7nVo3iEudBNMq4pLBW5TZSOusRgrWYXQnRkX4xcAkcoqKDtjwnK_-4hGwEFJOSQzipWkZ1WaX5unRK_mRBg
+----- END CREV PROOF -----
+
