@@ -1,0 +1,31 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-09-01T07:35:44.112930-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: mint
+  version: 0.5.9
+  revision: 8ea6a9f531e9c15f3d79c376e38ec422c21f36c9
+  digest: Or_MhW4hQNvh3jDNWliAk2y936sCpPjaBXxKVuXT5C8
+review:
+  thoroughness: medium
+  understanding: medium
+  rating: positive
+comment: |-
+  A very straightforward library. Some complaints one could have about it:
+  
+  * No type documentation.
+    [Some was contributed but the PR stalled](https://github.com/kvark/mint/pull/36).
+  * Contains use of `unsafe` code, to provide `&`/`&mut` access to different
+    interpretations of the same type (e.g. a quaternion as either
+    `{Vector3<T>, T}` or as `[T; 4]`). I believe the unsafe code is correct,
+    even in the presence of unusual choices of `T`.
+----- SIGN CREV PROOF -----
+iSfxbQoqfgAwHnWINpEd7gEe4TrQWIDg1knM0WPiKpCskuuc0aIhmSMviSy2iUobGgRmVxCQZXC28qmUjLRZAg
+----- END CREV PROOF -----
+
