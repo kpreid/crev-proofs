@@ -29,3 +29,45 @@ comment: |-
 iSfxbQoqfgAwHnWINpEd7gEe4TrQWIDg1knM0WPiKpCskuuc0aIhmSMviSy2iUobGgRmVxCQZXC28qmUjLRZAg
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-09-02T11:31:09.531785-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: png-decoder
+  version: 0.1.1
+  revision: 48554a59ff775ac6b048f927a291077358909f43
+  digest: eLQADHfTsEj-Zeem7qJgLx_W00fQI-ermeSCTNv3ryA
+review:
+  thoroughness: low
+  understanding: medium
+  rating: positive
+comment: |-
+  On a quick skim, "this sure looks like a PNG decoder":
+  all the code is a reasonable kind of code for what it says it does,
+  but I have not reviewed it for correctness.
+  
+  I have also confirmed its functionality as a replacement for `image`'s
+  PNG support in my use case with a few small static PNGs.
+  
+  Good things:
+  
+  * There is no `unsafe` code.
+  * It seems to be taking care to return decoding errors rather than
+    panicking, and the fuzz testing set up in the repository should be
+    detecting such cases.
+  
+  Potentially problematic:
+  
+  * It allocates an amount of memory determined by the input image
+    (using `Vec::with_capacity()`) without checks, so a malicious image
+    could DoS via excessive memory use (zip bomb attack).
+----- SIGN CREV PROOF -----
+LZl-64pTljxhlJBCvnPcz20fuELZ1iYQu6GCayrssVqIXQPK07Cjfzn2q_p9s98nz7HSvCqwDrYNCBzviPVlBQ
+----- END CREV PROOF -----
+
