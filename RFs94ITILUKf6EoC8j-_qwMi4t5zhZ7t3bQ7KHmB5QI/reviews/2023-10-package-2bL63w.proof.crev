@@ -1,0 +1,33 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-10-14T16:31:34.929604-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: logging-allocator
+  version: 0.1.1
+  revision: 984171017ca88bc350b6cc92ae1adb2d911b02d0
+  digest: sJ4qJxRkXj4TJ2uW3w3GfejAYxC3NU8HdD9ZPToBvwo
+review:
+  thoroughness: medium
+  understanding: high
+  rating: positive
+comment: |-
+  Does what it says. One caveat:
+  
+  * When it says _logging_, it means logging, and only logging: there is
+    no machine-readable output that might be usable in automated tests
+    of allocation behavior.
+  
+  One bug:
+  
+  * If the closure passed to `run_guarded()` panics, there is no cleanup
+    and so the calling thread will never log again.
+----- SIGN CREV PROOF -----
+FDTTpcfDXPIHvQTJO3i71JEiO3SFON-7KXPBcjW8KHLEygx8l0saHlBGB09vQMk6E_azQWLBu-HAra6J0c8MDQ
+----- END CREV PROOF -----
+
