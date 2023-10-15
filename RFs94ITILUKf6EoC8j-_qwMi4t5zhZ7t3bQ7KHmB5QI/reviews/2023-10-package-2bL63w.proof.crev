@@ -77,3 +77,27 @@ comment: |-
 TWduUToLEhGUD2YFakzmAZwBSoM-ZG9PFClc8ErNWgRKMQ0Ngtdg5ECQqwflGmDtP4xOo9chhcZA79sHdDBjBw
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-10-14T21:06:37.279623-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: arcstr
+  version: 1.1.5
+  revision: 36dcce983af4444b65cb035439f1531400ec18a3
+  digest: aLT5WJGXriGSSVBRy-8nxePMlM9D4W_j30yL3R20gmY
+review:
+  thoroughness: low
+  understanding: low
+  rating: positive
+comment: |-
+  Basic sanity-check. All the code looks reasonable.
+----- SIGN CREV PROOF -----
+_Kf21uYLUqKiNIM-rmvFfbTZBwor1urqYAqdOOfHtqrmCoJwGBOEUdydFACJlKCjVXSMLD4MqUKKx-gzhdl6Bw
+----- END CREV PROOF -----
+
