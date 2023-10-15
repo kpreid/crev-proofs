@@ -31,3 +31,49 @@ comment: |-
 FDTTpcfDXPIHvQTJO3i71JEiO3SFON-7KXPBcjW8KHLEygx8l0saHlBGB09vQMk6E_azQWLBu-HAra6J0c8MDQ
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-10-14T17:09:39.875390-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: allocation-counter
+  version: 0.8.1
+  revision: 97fedeb4fcc7d307461f2b643d6dcf29bc3a5a9e
+  digest: goMHFRyBq6a85_mTMn4NCEUzyN4fWOShgCgEDEMNRd0
+review:
+  thoroughness: low
+  understanding: medium
+  rating: positive
+comment: |-
+  Good characteristics (compared to other instrumented allocators):
+  
+  * Allocation numbers are tracked per-thread, which means that it can be
+    used in parallel tests reliably.
+  
+  Limitations (compared to other instrumented allocators):
+  
+  * Not generic; always delegates to the `System` allocator.
+  * Declares `#[global_allocator]` itself, so whether it is used depends
+    on whether the crate is linked, not on code in the dependent crate.
+  
+  Bugs noticed during review:
+  
+  * Counts failed allocations as if they succeeded.
+  * `measure(f)` does not clean up state if `f()` panics.
+  * If the allocation tracking stack overflows, the counter will be left
+    incremented, which I think will cause future allocations to panic.
+  
+  None of those bugs affect safety.
+  
+  I made this review while searching for an instrumented allocator I could
+  use in tests, and others I have evaluated are
+  <https://docs.rs/stats_alloc/0.1.10/> and <https://docs.rs/logging-allocator/0.1.1/>.
+----- SIGN CREV PROOF -----
+TWduUToLEhGUD2YFakzmAZwBSoM-ZG9PFClc8ErNWgRKMQ0Ngtdg5ECQqwflGmDtP4xOo9chhcZA79sHdDBjBw
+----- END CREV PROOF -----
+
