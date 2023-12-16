@@ -24,3 +24,30 @@ comment: |-
 2WGrGVu2PiE6eRsRXsFir5y1mTE0Uqmc-kFLx8B6OXPCw30LRfhh7EgWY9hXveItLbvb_rp3pCmsaV7QmTgICg
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2023-12-16T12:44:28.562087-08:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: cassowary
+  version: 0.3.0
+  digest: NF547mgkFEMqGDxgXFqxWh61P5PewZsm1z_LDDgj5KM
+review:
+  thoroughness: low
+  understanding: low
+  rating: positive
+comment: |-
+  * Contains no unsafe code.
+  * Contains no IO.
+  * I have examined the code to check that it is not obviously malicious or obfuscated.
+  
+  One concern: a global `AtomicUsize` counter is used to assign `Variable` IDs. This counter could be overflowed on 32 or 16-bit platforms; it would be better to use an `AtomicU64` or some other strategy.
+----- SIGN CREV PROOF -----
+QsL_EMq4Cx2zAOC9q-LW6i5kugAuStGgBgV5ZlxX2GK41koMz6eg4dV-kP1LZN9jPSuIV7XtkSsTtehSXbcJBw
+----- END CREV PROOF -----
+
