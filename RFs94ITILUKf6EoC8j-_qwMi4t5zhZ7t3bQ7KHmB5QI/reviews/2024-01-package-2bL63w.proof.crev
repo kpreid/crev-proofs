@@ -1,0 +1,32 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2024-01-26T17:52:53.138852-08:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: web-time
+  version: 1.0.0
+  revision: 6431f168c6cbdf550433a8312ff02a44d7b99ae9
+  digest: piqZJY0vF3R-dObceRkYd45CqdjU-wQjVqPAMVTmZUA
+package-diff-base:
+  source: https://crates.io
+  name: web-time
+  version: 0.2.3
+  revision: b45f017d76e6f78542330be36aa7489142d67c47
+  digest: cDNRvgeSon1BTxc9_JnG8jyqI7jriM_c4aUptaHjzgE
+review:
+  thoroughness: low
+  understanding: medium
+  rating: positive
+comment: |-
+  Looks correct and generally good.
+  
+  Nitpick: It uses a reexport `pub use std::time::*` (while shadowing `Instant` and `SystemTime`). This means that if `std` adds an item later, `web_time` will start reexporting it even if it needs a reimplementation instead. It would be more robust for `web_time` to reexport only an explicit list of items.
+----- SIGN CREV PROOF -----
+9oy8oppKYDZlYeT37dxcL23jjPZ9QU53FG8A-2LXXNbR_e-0laV7pOoLtjWrfChoFZYjaMscJnEqz3LXGnUeDA
+----- END CREV PROOF -----
+
