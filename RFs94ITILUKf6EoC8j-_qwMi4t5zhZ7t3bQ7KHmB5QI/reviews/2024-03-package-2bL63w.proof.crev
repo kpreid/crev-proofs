@@ -1,0 +1,32 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2024-03-02T16:14:05.345923-08:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: ratatui
+  version: 0.26.1
+  revision: efd1e476425477b0bce15e3dd96d5cdeb0e1174b
+  digest: XdaINDWedVGa1IalwLdQfQKs0TGcL0WY8m1t0elzBV8
+package-diff-base:
+  source: https://crates.io
+  name: ratatui
+  version: 0.24.0
+  revision: c597b87f72bc578cdd65d533506db5bdc49af608
+  digest: mBA3XmI40r22fHsX2wt-O-ZUl_qK1Uurv52GEShe0hM
+review:
+  thoroughness: low
+  understanding: low
+  rating: positive
+comment: |-
+  * Contains no unsafe code.
+  * Performs IO only as requested by the caller.
+  * I have examined the code to check that it is not obviously malicious or obfuscated.
+----- SIGN CREV PROOF -----
+pS9t8Bh491GZfWLmcHd3xkiug_DRvC4j9tHoM68NWSMx-6VSDYwyZ3Vumb5Z34krtTewFF4Yj4LpTgWMxI08Dg
+----- END CREV PROOF -----
+
