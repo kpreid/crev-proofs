@@ -1,0 +1,28 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2024-04-23T08:13:49.283476-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: sync_wrapper
+  version: 1.0.1
+  revision: ec3abb02497d85698d805ea8bcb5d2ef97b81303
+  digest: TJ3yn6m5Q_xasTdtvymDpcxvqVYZs9XLl7S-wm3hu6Y
+review:
+  thoroughness: low
+  understanding: medium
+  rating: positive
+comment: |-
+  Does what it says it does, and what it says it does is sound as far as I know.
+  In fact, the standard library contains the same thing, unstable, under the 
+  name `std::sync::Exclusive`:
+  <https://doc.rust-lang.org/1.77.0/std/sync/struct.Exclusive.html>
+  So this library can be seen as an interim substitute for that.
+----- SIGN CREV PROOF -----
+z5rtgBrmgGy7SzP1s9dOvWKNDCaFTg3pAN_2NrbQ7RJtjwMdwSE2BaPXeTE4VU1o8vyFdTmDEEmGLpRnI1tvCg
+----- END CREV PROOF -----
+
