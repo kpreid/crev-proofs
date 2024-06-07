@@ -1,0 +1,18 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2024-06-06T18:15:28.425516-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: imgref
+  version: 1.10.1
+  revision: 8eceb041f308350ec872cef4a7e4c7a660e6d2e3
+  digest: 27Mu_rqIY3UCypu-qK4i-YgtvS7DBwX3X_Q_CfOHQr8
+----- SIGN CREV PROOF -----
+gNhajT1nhOCLSh8VsJi9y33fA1fa2IINRmVW1gb04kQqsqXjQNststHTTQpSL8yL2SnlUfy72KBejjqxLWCECQ
+----- END CREV PROOF -----
+
