@@ -16,3 +16,33 @@ package:
 gNhajT1nhOCLSh8VsJi9y33fA1fa2IINRmVW1gb04kQqsqXjQNststHTTQpSL8yL2SnlUfy72KBejjqxLWCECQ
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2024-06-21T10:39:13.408976-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: displaydoc
+  version: 0.2.5
+  revision: e4028851bfb82998300237f7568a45f589a19e40
+  digest: lE0YaNYgpIWE85OEKh28SPmP6ub73GJ5RyRo47h0dCo
+package-diff-base:
+  source: https://crates.io
+  name: displaydoc
+  version: 0.2.4
+  revision: f0b62a55ec2495b1a60b18f1d93f8b27e53123a7
+  digest: 0DaA-x_-6FYSuMgS9ECs0jx87AmgJpEWKxNLW0MSUJ8
+review:
+  thoroughness: none
+  understanding: low
+  rating: positive
+comment: |-
+  Skimmed; looks fine and contains no surprises for a proc-macro crate.
+----- SIGN CREV PROOF -----
+OkMeEzH0j-CLB8o2SMidrj-883xSOxPsCCB6fULqHfothzeHVtQv_4VxY8M1Z4Uf-5y-MlJpCSWLrIYqHmPiCw
+----- END CREV PROOF -----
+
