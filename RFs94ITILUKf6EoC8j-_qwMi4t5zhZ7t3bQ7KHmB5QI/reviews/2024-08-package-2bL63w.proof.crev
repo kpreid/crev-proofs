@@ -64,3 +64,47 @@ comment: |-
 6qe-_U0ervSfo33GUjtzwMcSRp76GZrdPUCr-8XX0qv-PNZoQQCjgQzTyyK4vuvvbGT3bhAVe1CvudhYnrgWAw
 ----- END CREV PROOF -----
 
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2024-08-14T09:28:59.762142-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: stl_io
+  version: 0.8.1
+  revision: 9edf7ca895e2f13969ffbe7d8f9d696146f02dc9
+  digest: hgeDrr62VxynqJWQels19PR16s6Z7gFtrBlxXQS7sOo
+package-diff-base:
+  source: https://crates.io
+  name: stl_io
+  version: 0.7.0
+  revision: d45e12b0562a11553fd07bbcd3b2909950d88bc9
+  digest: WDzsP06SuL0NlSSILwJm-P0DGIcN0bW3VxT0VWQ-J7c
+review:
+  thoroughness: medium
+  understanding: medium
+  rating: positive
+comment: |-
+  I have reviewed the code for reasonableness, not correctness. It is
+  generally straightforward, though in a somewhat unusual style with
+  a lot of absolute paths.
+  
+  There is one `unsafe` code block, which is sound but unnecessary.
+  
+  I have been successfully using this library to write STL files.
+  I have not tested it for reading STL files.
+  
+  Compared to the previous version I reviewed, 0.7.0,
+  
+  * There are no code changes (odd).
+  * There is no changelog.
+  * The license information has been clarified, but it is no longer
+    under the Apache-2.0 license, only MIT.
+----- SIGN CREV PROOF -----
+glIopdIkAwqNoaaQR7QiLDJyP0sSjDQF3v_1G21JUtvgTTFl5fThuNJcTl9xEgotogzbKApqGRypKnQUU3Q0BQ
+----- END CREV PROOF -----
+
