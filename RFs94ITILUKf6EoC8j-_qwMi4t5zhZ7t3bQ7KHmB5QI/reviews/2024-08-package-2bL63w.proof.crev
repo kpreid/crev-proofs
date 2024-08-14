@@ -1,0 +1,31 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: 2024-08-14T09:17:37.372022-07:00
+from:
+  id-type: crev
+  id: RFs94ITILUKf6EoC8j-_qwMi4t5zhZ7t3bQ7KHmB5QI
+  url: https://github.com/kpreid/crev-proofs
+package:
+  source: https://crates.io
+  name: stl_io
+  version: 0.7.0
+  revision: d45e12b0562a11553fd07bbcd3b2909950d88bc9
+  digest: WDzsP06SuL0NlSSILwJm-P0DGIcN0bW3VxT0VWQ-J7c
+review:
+  thoroughness: medium
+  understanding: medium
+  rating: positive
+comment: |-
+  I have reviewed the code for reasonableness, not correctness. It is
+  generally straightforward, though in a somewhat unusual style with
+  a lot of absolute paths.
+  
+  There is one `unsafe` code block, which is sound but unnecessary.
+  
+  I have been successfully using this library to write STL files.
+  I have not tested it for reading STL files.
+----- SIGN CREV PROOF -----
+aDBhlJpSgQP0DUBxHXQvRKY_dGYU0SiwR3m-7J4iKOkAZURLvqrzMZtomfnNsXQ6DdA_d7RJjRy_caYGYX35Bg
+----- END CREV PROOF -----
+
